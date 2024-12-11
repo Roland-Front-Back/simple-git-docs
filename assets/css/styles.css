@@ -117,13 +117,13 @@ footer {
 
 @media (max-width: 768px) {
     #navbar {
-        display: none; /* Hide the navbar */
+        display: none; 
     }
 
     #main-doc {
-        margin-left: 0; /* Remove left margin since the navbar is hidden */
+        margin-left: 0; 
         margin-top: 10px;
-        width: 100%; /* Ensure the main content takes the full width */
+        width: 100%; 
     }
 }
 
