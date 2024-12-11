@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Basic</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Simple Git Documentation</header>
+        <ul>
+            <li>
+                <a href="#introduction" class="nav-link">Introduction</a>
+            </li>
+            <li>
+                <a href="#prerequisites" class="nav-link">Prerequisites</a>
+            </li>
+            <li>
+                <a href="#git-basics" class="nav-link">Git Basic</a>
+            </li>
+            <li>
+                <a href="#collaborating-with-git" class="nav-link">Collaborating with Git</a>
+            </li>
+            <li>
+                <a href="#advanced-commands" class="nav-link">Advanced Commands</a>
+            </li>
+            <li>
+                <a href="#troubleshooting" class="nav-link">Troubleshooting</a>
+            </li>
+            <li>
+                <a href="#resources" class="nav-link">Resources</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Git is a popular tool that helps developers work on projects together and keep
+                     track of changes to their code. It's fast, reliable, and works well for projects
+                     of any size. With Git, you can create separate branches to try new ideas, save
+                     different versions of your work, and combine changes easily without messing up 
+                     the main project. It's easy to use and an essential tool for modern software development.</p>
+            </article>
+        </section>
+        <section class="main-section" id="prerequisites">
+            <header>Prerequisites</header>
+            <article>
+                <p>Before using Git, ensure the following:</p>
+                <ol>
+                    <li>Git Installation:
+                        <ul>
+                        <li>Download Git from <a class="resource-link" href="https://git-scm.com/">git-scm.com.</a></li>
+                        <li>Fllow the instructions to install it for your operating system.</li>
+                        </ul>
+                    </li>
+                    <li>Basic Terminal Knowledge:
+                        <ul>
+                        <li>Understanding how to navigate directories and execute commands in a <br>
+                        terminal or commmand prompt.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="git-basics">
+            <header>Git Basics</header>
+            <article>
+                <ul>
+                    <li>Setting Up Git for the First Time</li>
+                    <li  class="square"><p>Purpose: Configures your identity in Git.</p></li>
+                    <li  class="alpha">Commands: <br>
+                        <code>
+                            git config --global user.name "Your Name" <br>
+                            git config --global user.email "youremail@example.com"
+                        </code>
+                    </li>
+                    <li  class="alpha"><p>--global: Ensures these settings apply across all projects.</p></li>
+                    <li  class="alpha">Check your configuration: <br>
+                        <code>
+                            git config ---list
+                        </code>
+                    </li>
+                
+                    <li>Initializing a Repository</li>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git init
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Creates a new Git repository in the current folder.</p></li>
+                    <li  class="alpha">example: <br>
+                        <code>
+                            mkdir my-project <br>
+                            cd my-project <br>
+                            git init
+                        </code>
+                    </li>
+
+                    <li>Staging Changes</li>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git add &lt;file&gt;
+                        </code>
+                    </li>
+                    <li   class="square"><p>Purpose: Adds changes to the staging area.</p></li>  
+                    <li  class="alpha">Examples: <br>
+                        <code>
+                            git add index.html <br>
+                            git add .
+                        </code>
+                    </li>
+                    <li  class="alpha"><p>git add . : Adds all changes in the current directory.</p></li>
+
+                    <li>Commiting Changes</li>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git commit -m "Your commit message"
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Saves the staged to the repository with a message.</p></li>
+                    <li>Example: <br>
+                        <code>
+                            git commit -m "Added index.html"
+                        </code>
+                    </li>
+                    <li>Viewing Repository Status</li>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git status
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Displays the state of the working directory and staging area.</p></li>
+                    <li>Output Example: <br>
+                        <li  class="alpha">Files added for commit.</li>
+                        <li  class="alpha">Untracked files.</li>
+                    </li>
+
+                    <li>Viewing Commit History</li>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git log
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Shows a history of commits in the repository.</p></li>
+                    <li>Options: <br>
+                        <li  class="alpha">git log --oneline: Display a concise one-line log.</li>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="collaborating-with-git">
+            <header>Collaborating with Git</header>
+            <article>
+                <ul>
+                    <li>Cloning a Repository</li>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git clone &lt;repository_url&gt;
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Creates a local copy of a remote repository.</p></li>
+                    <li  class="alpha">Example: <br>
+                        <code>
+                            git clone https://github.com/user/repo.git
+                        </code>
+                    </li>
+                    <li>Checking for Updates</li>
+
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git fetch
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Retrieves changes from the remote repository but doesn't apply them.</p></li>
+
+                    <li>Merging Updates</li>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git pull
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Fetches and integrates changes from the remote repository into your local branch.</p></li>
+                    <li>Example: <br>
+                        <code>
+                            git pull origin main
+                        </code>
+                    </li>
+
+                    <li>Pushing Changes</li>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git push
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Sends your commits to the remote repository.</p></li>
+                    <li>Example: <br>
+                        <code>
+                            git push origin main
+                        </code>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="advanced-commands">
+            <header>Advanced Commands</header>
+            <article>
+              <ul>
+                <li>Creating Branches</li>
+                <li  class="alpha">Command: <br>
+                    <code>
+                        git branch &lt;branch_name&gt;
+                    </code>
+                </li>
+                <li  class="square"><p>Purpose: Creates a new branch for feature development.</p></li>
+                <li>Example: <br>
+                    <code>
+                        git branch feature-login
+                    </code>
+                </li>
+
+                <li>Switchin Branches</li>
+                <li  class="alpha">Command: <br>
+                    <code>
+                        git checkout &lt;branch_name&gt;
+                    </code>
+                </li>
+                <li  class="square"><p>Purpose: Moves to a different branch.</p></li>
+                <li>Example: <br>
+                    <code>
+                        git checkout feature-login
+                    </code>
+                </li>
+
+                <li>Merging Branches</li>
+                <li  class="alpha">Command: <br>
+                    <code>
+                        git merge &lt;branch_name&gt;
+                    </code>
+                </li>
+                <li  class="square"><p>Purpose: Combines changes from another branch into the current branch.</p></li>
+              </ul>
+            </article>
+        </section>
+        <section class="main-section" id="troubleshooting">
+            <header>Troubleshooting</header>
+            <article>
+                <ul>
+                    <h3>Undoing a Commit</h3>
+                    <li  class="alpha">Command: <br>
+                        <code>
+                            git reset --soft HEAD~1
+                        </code>
+                    </li>
+                    <li  class="square"><p>Purpose: Reverts the last commit but keeps the changes staged.</p></li>
+                   
+                    <h3>Ignoring Files</h3>
+                    <li>Files: .gitignore <br>
+                        <li  class="alpha"><p>Add file patterns to .gitignore to exclude them from Git tracking.</p></li>
+                        <li  class="alpha">
+                            <code>
+                                node_modules/ <br>
+                                *.log
+                            </code>
+                        </li>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="resources">
+            <header>Resources</header>
+            <article>
+                <ul>
+                    <li  class="alpha"><a class="resource-link" href="https://git-scm.com/doc">Git Documentation</a></li>
+                    <li  class="alpha"><a class="resource-link" href="https://education.github.com/git-cheat-sheet-education.pdf">Git Cheat Sheet (PDF)</a></li>
+                </ul>
+            </article>
+        </section>
+        <footer>Made by @stoaxcode 2024</footer>
+    </main>
+</body>
+</html>
