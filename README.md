@@ -6,19 +6,19 @@ A beginner-friendly, visually styled website to help you learn and reference ess
 
 ## 📋 Table of Contents
 
-- [📖 Overview](#-overview)
+- [📖Overview](#-overview)
 
-- [✨ Features](#-features)
+- [✨Features](#-features)
 
-- [📁 Project Structure](#-project-structure)
+- [📁Project Structure](#-project-structure)
 
-- [🛠️ Installation](#-installation)
+- [🛠️Installation](#-installation)
 
-- [🚀 Usage](#-usage)
+- [🚀Usage](#-usage)
 
-- [🤝 Contributing](#-contributing)
+- [🤝Contributing](#-contributing)
 
-- [🔗 Resources & Credits](#-resources-&-credits)
+- [🔗Resources & Credits](#-resources-&-credits)
 
 ---
 
