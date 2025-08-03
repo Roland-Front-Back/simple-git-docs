@@ -18,8 +18,6 @@ A beginner-friendly, visually styled website to help you learn and reference ess
 
 - [🤝 Contributing](#-contributing)
 
-- [📄 License](#-license)
-
 - [🔗 Resources & Credits](#-resources-&-credits)
 
 ---
